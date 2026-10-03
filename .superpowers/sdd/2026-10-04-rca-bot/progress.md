@@ -57,3 +57,5 @@ Ruling: reject filterValue shaped like /regex/ in addition to FILTER_VALUE_RE - 
 Ruling: clampWindow also floors endMs at incident.startMs - plan formula violates the "always inside incident" property for requests entirely before the incident (found by fast-check) - none
 Task 4: complete (catalog+property 19/19; core 58 total; typecheck ok) | commit: "feat(core): add typed query catalog with injection-proof parameters"
 Task 14: complete (infra vitest -> 9 passed (3 files); lint+typecheck clean) | commit: "feat(infra): add CDK stack with streams, Lambdas, DLQs and AppSync API"
+Task 5: complete (verifyEvidence 27 tests incl. 1000-run property; suite 88/88) | commit: "feat(core): verify cited quotes and compute confidence bands, redact prompts"
+Ruling: Tasks 5 and 6 committed together (confidence/redact written in same sitting after verifier tests) - no stub step needed - none
