@@ -52,3 +52,4 @@ Task 11: complete (functions vitest -> 27 passed (5 files); lint+typecheck clean
 Task 12: complete (functions vitest -> 31 passed; pnpm build -> bundled recompute: 310380 bytes, bundled publisher: 961863 bytes) | commit: "build(functions): bundle recompute and publisher Lambdas with esbuild"
 Task 2: complete (parser 21/21; typecheck ok) | commit: "feat(core): parse the Logs Insights subset used by the catalog"
 Task 13: complete (api vitest -> 18 passed; lint+typecheck clean; AppSync lint rule proof: temporary for-loop in Query.price.js -> grep -c @aws-appsync/no-for = 1, reverted) | commit: "feat(api): add GraphQL schema and APPSYNC_JS resolvers with unit tests"
+Task 3: complete (insights 33/33 (parser+evaluate); typecheck ok) | commit: "feat(core): evaluate Logs Insights subset queries over log events"
