@@ -63,3 +63,4 @@ Task 9: complete (memory store 5 + dedupe 5 tests incl. 5-concurrent storm) | co
 Task 10: complete (dynamo store 7 tests with aws-sdk-client-mock) | commit: "feat(ports): persist incidents and budgets in DynamoDB with conditional writes"
 Task 11: complete (runners/results/runQueries tests) | commit: "feat(ports): run catalog queries in fixture mode or on CloudWatch Logs Insights"
 Task 12: complete (schemas/ollama/bedrock/scripted tests) | commit: "feat(model): add model port with Ollama, Bedrock Converse and scripted models"
+Task 13: complete (prompts 5 + planQueries 7 tests) | commit: "feat(steps): let the model choose catalog queries with validation and fallback"
