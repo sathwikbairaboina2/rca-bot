@@ -53,3 +53,6 @@ Task 12: complete (functions vitest -> 31 passed; pnpm build -> bundled recomput
 Task 2: complete (parser 21/21; typecheck ok) | commit: "feat(core): parse the Logs Insights subset used by the catalog"
 Task 13: complete (api vitest -> 18 passed; lint+typecheck clean; AppSync lint rule proof: temporary for-loop in Query.price.js -> grep -c @aws-appsync/no-for = 1, reverted) | commit: "feat(api): add GraphQL schema and APPSYNC_JS resolvers with unit tests"
 Task 3: complete (insights 33/33 (parser+evaluate); typecheck ok) | commit: "feat(core): evaluate Logs Insights subset queries over log events"
+Ruling: reject filterValue shaped like /regex/ in addition to FILTER_VALUE_RE - the plan regex must allow "/" (for "orders/v18: 503") yet the plan test requires "/abc/" rejected - negligible: values are quoted literals so either way inert
+Ruling: clampWindow also floors endMs at incident.startMs - plan formula violates the "always inside incident" property for requests entirely before the incident (found by fast-check) - none
+Task 4: complete (catalog+property 19/19; core 58 total; typecheck ok) | commit: "feat(core): add typed query catalog with injection-proof parameters"
