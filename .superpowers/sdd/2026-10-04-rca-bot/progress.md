@@ -58,3 +58,4 @@ Ruling: Tasks 5 and 6 committed together (confidence/redact written in same sitt
 Task 6: complete (confidence 6 cases, redact 4 tests; suite 88/88; typecheck ok) | commit: "feat(core): verify cited quotes, compute confidence bands and redact prompt rows"
 Ruling: commits 728041a, 9b0a7f8, 5f27c9d, 8b8d872, cac1178 carry wrong subjects (Task 2, 3 and 5 content under another project's subjects) - a shared /tmp/done.sh helper was overwritten by a sibling session; history rewrite was denied by the permission classifier so it is left as is, and foreign "Task 11-14" ledger lines were removed - cosmetic git-log noise only
 Task 7: complete (alarmEvent/flag/chaos/orders tests; suite 113/113) | commit: "feat(demo): add demo service fault hooks, chaos flag and labelled scenarios"
+Task 8: complete (sim 14/14 (5 scenarios alarm+signature, determinism); suite green) | commit: "feat(sim): simulate the demo service under labelled faults with alarm evaluation"
