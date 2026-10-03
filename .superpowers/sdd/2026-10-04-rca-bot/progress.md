@@ -75,3 +75,6 @@ Task 20: complete (eval 5 tests (score, runEval, never-crash, fabrication 10/10 
 Task 21: complete (handlers 9 tests; npm run bundle -> 10 bundles, orders 3406 KiB, payments 3403, chaos 3405, 7 investigator steps 3613 KiB each) | commit: "feat(handlers): add Lambda entrypoints over the shared stages and an esbuild bundle"
 Ruling: vitest hookTimeout raised to 90 s - CDK stack synthesis in beforeAll exceeded the 10 s default on a cold cache - slower failure detection only
 Task 22: complete (infra demo 5 + chaos 3 CDK assertion tests (I7 rule, I8 tag condition, no wildcard actions)) | commit: "feat(infra): add demo service and chaos stacks with tag-scoped fault injection"
+Ruling: bytesScanned usage is recorded in the hypothesize handler instead of runQuery - the plan's least-privilege table gives runQuery no DynamoDB access (Task 23 matrix) - usage is added slightly later, same total
+Task 23 note: mutation check done - temporarily adding table.grantReadWriteData(dedupe) made the I6 allowlist test fail (1 failed | 5 passed); reverted, 6/6 pass. npm run synth -> exit 0, 3 templates, resource counts RcaChaos 7, RcaDemoService 22, RcaInvestigator 38
+Task 23: complete (infra investigator 6 tests (I6 allowlist, mutation-checked); synth ok) | commit: "feat(infra): add least-privilege investigator state machine and CDK app"

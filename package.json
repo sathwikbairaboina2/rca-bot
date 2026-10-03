@@ -16,7 +16,7 @@
     "test": "vitest run",
     "test:integration": "vitest run --config vitest.integration.config.ts",
     "bundle": "node scripts/bundle.mjs",
-    "synth": "npm run bundle && cdk synth --all --quiet",
+    "synth": "npm run bundle && cdk synth --all --quiet --no-notices",
     "rca": "tsx src/cli/main.ts",
     "lint:catalog": "tsx src/cli/main.ts catalog lint",
     "eval:baseline": "tsx src/cli/main.ts eval run --model heuristic --scenarios all --repeat 3",

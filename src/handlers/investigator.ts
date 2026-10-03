@@ -40,7 +40,6 @@ export const makeRunQueryHandler = (f: DepsFactory) => async (item: { incidentId
   const deps = await f();
   const result = await deps.runner.run(item.query);
   await deps.results.put(item.incidentId, result);
-  await deps.store.addUsage(item.incidentId, { bytesScanned: result.bytesScanned });
   return { queryId: result.queryId, status: result.status, rows: result.rows.length };
 };
 
@@ -48,6 +47,8 @@ export const makeHypothesizeHandler = (f: DepsFactory) => async (state: Investig
   if (!state.context) throw new Error("hypothesize step needs state.context");
   const deps = await f();
   const results = await deps.results.list(state.dedupe.incidentId);
+  // Bytes scanned are recorded here, not in runQuery, so the query workers need no table access.
+  await deps.store.addUsage(state.dedupe.incidentId, { bytesScanned: results.reduce((n, r) => n + r.bytesScanned, 0) });
   return stageHypothesize(state.dedupe.incidentId, state.context, results, deps);
 };
 
