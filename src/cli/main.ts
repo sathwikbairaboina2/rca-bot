@@ -4,6 +4,7 @@ import { pathToFileURL } from "node:url";
 import { catalogCommand } from "./commands/catalog.js";
 import { chaosCommand } from "./commands/chaos.js";
 import { demoCommand } from "./commands/demo.js";
+import { evalCommand } from "./commands/eval.js";
 import { incidentCommand } from "./commands/incident.js";
 import { realIo, USAGE, type CliIo } from "./io.js";
 
@@ -14,11 +15,8 @@ const COMMANDS: Record<string, Command> = {
   catalog: catalogCommand,
   incident: incidentCommand,
   chaos: chaosCommand,
+  eval: evalCommand,
 };
-
-export function registerCommand(name: string, cmd: Command): void {
-  COMMANDS[name] = cmd;
-}
 
 export async function runCli(argv: string[], io: CliIo): Promise<number> {
   const [name, ...rest] = argv;
