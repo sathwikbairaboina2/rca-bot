@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderIncidentCard > matches the POSTED snapshot 1`] = `
+{
+  "blocks": [
+    {
+      "text": {
+        "text": "🚨 orders-5xx-rate · orders",
+        "type": "plain_text",
+      },
+      "type": "header",
+    },
+    {
+      "elements": [
+        {
+          "text": "Status: *POSTED* · opened 2026-10-03T10:00:00.000Z · model heuristic · 1 queries · 1 alarm(s)",
+          "type": "mrkdwn",
+        },
+      ],
+      "type": "context",
+    },
+    {
+      "text": {
+        "text": "*Top hypothesis:* DEPENDENCY_THROTTLING (confidence *High*)
+DynamoDB throttling: 212 errors.",
+        "type": "mrkdwn",
+      },
+      "type": "section",
+    },
+    {
+      "text": {
+        "text": "*Evidence*
+• \`q1\` throttling_exceptions row 0: errorType=ProvisionedThroughputExceededException",
+        "type": "mrkdwn",
+      },
+      "type": "section",
+    },
+    {
+      "text": {
+        "text": "*Deploys near the window*
+• 2026-10-03T09:59:00.000Z rca-demo-payments 41 → 42",
+        "type": "mrkdwn",
+      },
+      "type": "section",
+    },
+    {
+      "elements": [
+        {
+          "action_id": "feedback_correct",
+          "text": {
+            "text": "Correct",
+            "type": "plain_text",
+          },
+          "type": "button",
+          "value": "inc-202610031000-abcdef",
+        },
+        {
+          "action_id": "feedback_wrong",
+          "text": {
+            "text": "Wrong",
+            "type": "plain_text",
+          },
+          "type": "button",
+          "value": "inc-202610031000-abcdef",
+        },
+        {
+          "action_id": "show_raw",
+          "text": {
+            "text": "Show raw queries",
+            "type": "plain_text",
+          },
+          "type": "button",
+          "value": "inc-202610031000-abcdef",
+        },
+      ],
+      "type": "actions",
+    },
+  ],
+  "text": "[POSTED] orders-5xx-rate: DEPENDENCY_THROTTLING",
+}
+`;
