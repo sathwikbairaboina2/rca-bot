@@ -46,3 +46,4 @@ A fresh builder resumes at the first task without a `complete` line. It must che
 ## Progress
 
 Task 0 (plan): complete (spec, 8 ADRs, 25-task plan, ledger) | commit: "docs: add rca-bot v0.1 spec, ADRs and implementation plan"
+Task 1: complete (rng+time 6/6; typecheck ok) | commit: "chore: scaffold rca-bot package with shared types"
