@@ -69,3 +69,4 @@ Task 15: complete (heuristic top1 on all 5 scenarios w/ 0 dropped, fabricator dr
 Task 16: complete (render 7 (1 snapshot) + posters 4 tests) | commit: "feat(slack): render Block Kit incident cards and post to webhook, sink or file"
 Ruling: compose healthcheck uses 127.0.0.1 not localhost - busybox wget resolved localhost to ::1 while the sink listens on IPv4 only (container reported unhealthy) - none
 Task 17: complete (sink 8/8 tests; docker smoke: compose up --wait -> Healthy, curl :5350/health -> {"ok":true}, compose down ok) | commit: "feat(slack): add dependency-free Slack sink that renders incident cards"
+Task 18: complete (pipeline 8 + storm 1 + contextSource 4 tests) | commit: "feat(pipeline): run the full investigation in-process with shared stage functions"
