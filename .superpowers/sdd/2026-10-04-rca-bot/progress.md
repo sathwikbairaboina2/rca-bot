@@ -62,3 +62,4 @@ Task 8: complete (sim 14/14 (5 scenarios alarm+signature, determinism); suite gr
 Task 9: complete (memory store 5 + dedupe 5 tests incl. 5-concurrent storm) | commit: "feat(steps): group alarms into incidents and enforce query and token budgets"
 Task 10: complete (dynamo store 7 tests with aws-sdk-client-mock) | commit: "feat(ports): persist incidents and budgets in DynamoDB with conditional writes"
 Task 11: complete (runners/results/runQueries tests) | commit: "feat(ports): run catalog queries in fixture mode or on CloudWatch Logs Insights"
+Task 12: complete (schemas/ollama/bedrock/scripted tests) | commit: "feat(model): add model port with Ollama, Bedrock Converse and scripted models"
