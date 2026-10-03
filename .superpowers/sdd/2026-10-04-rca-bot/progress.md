@@ -48,3 +48,4 @@ A fresh builder resumes at the first task without a `complete` line. It must che
 Task 0 (plan): complete (spec, 8 ADRs, 25-task plan, ledger) | commit: "docs: add rca-bot v0.1 spec, ADRs and implementation plan"
 Task 1: complete (rng+time 6/6; typecheck ok) | commit: "chore: scaffold rca-bot package with shared types"
 Task 10: complete (functions test:int -> 11 passed (3 files); with DDB down: unit test 18 passed exit 0, test:int -> 'DynamoDB Local not reachable at http://127.0.0.1:5360. Start it with: docker compose up -d dynamodb') | commit: "feat(functions): add DynamoDB store with versioned transactional price writes"
+Task 11: complete (functions vitest -> 27 passed (5 files); lint+typecheck clean) | commit: "feat(functions): add price publisher handler with SigV4 AppSync and local shim publishers"
