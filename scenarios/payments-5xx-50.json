@@ -1,0 +1,1 @@
+{ "id": "payments-5xx-50", "fault": "downstream_5xx", "params": { "rate": 0.5 }, "durationSec": 600, "expectedCategory": "DEPENDENCY_ERRORS", "expectedAlarm": "orders-5xx-rate" }

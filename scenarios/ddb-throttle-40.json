@@ -1,0 +1,1 @@
+{ "id": "ddb-throttle-40", "fault": "ddb_throttle", "params": { "rate": 0.4 }, "durationSec": 600, "expectedCategory": "DEPENDENCY_THROTTLING", "expectedAlarm": "orders-5xx-rate" }

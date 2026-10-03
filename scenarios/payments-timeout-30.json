@@ -1,0 +1,1 @@
+{ "id": "payments-timeout-30", "fault": "timeout", "params": { "rate": 0.3, "providerMs": 8000 }, "durationSec": 600, "expectedCategory": "TIMEOUT", "expectedAlarm": "orders-5xx-rate" }

@@ -1,0 +1,1 @@
+{ "id": "cold-start-storm", "fault": "cold_start", "params": { "rate": 1.0 }, "durationSec": 600, "expectedCategory": "COLD_START_STORM", "expectedAlarm": "orders-p99-latency" }

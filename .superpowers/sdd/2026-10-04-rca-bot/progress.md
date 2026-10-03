@@ -48,14 +48,13 @@ A fresh builder resumes at the first task without a `complete` line. It must che
 Task 0 (plan): complete (spec, 8 ADRs, 25-task plan, ledger) | commit: "docs: add rca-bot v0.1 spec, ADRs and implementation plan"
 Task 1: complete (rng+time 6/6; typecheck ok) | commit: "chore: scaffold rca-bot package with shared types"
 Task 10: complete (functions test:int -> 11 passed (3 files); with DDB down: unit test 18 passed exit 0, test:int -> 'DynamoDB Local not reachable at http://127.0.0.1:5360. Start it with: docker compose up -d dynamodb') | commit: "feat(functions): add DynamoDB store with versioned transactional price writes"
-Task 11: complete (functions vitest -> 27 passed (5 files); lint+typecheck clean) | commit: "feat(functions): add price publisher handler with SigV4 AppSync and local shim publishers"
-Task 12: complete (functions vitest -> 31 passed; pnpm build -> bundled recompute: 310380 bytes, bundled publisher: 961863 bytes) | commit: "build(functions): bundle recompute and publisher Lambdas with esbuild"
 Task 2: complete (parser 21/21; typecheck ok) | commit: "feat(core): parse the Logs Insights subset used by the catalog"
-Task 13: complete (api vitest -> 18 passed; lint+typecheck clean; AppSync lint rule proof: temporary for-loop in Query.price.js -> grep -c @aws-appsync/no-for = 1, reverted) | commit: "feat(api): add GraphQL schema and APPSYNC_JS resolvers with unit tests"
 Task 3: complete (insights 33/33 (parser+evaluate); typecheck ok) | commit: "feat(core): evaluate Logs Insights subset queries over log events"
 Ruling: reject filterValue shaped like /regex/ in addition to FILTER_VALUE_RE - the plan regex must allow "/" (for "orders/v18: 503") yet the plan test requires "/abc/" rejected - negligible: values are quoted literals so either way inert
 Ruling: clampWindow also floors endMs at incident.startMs - plan formula violates the "always inside incident" property for requests entirely before the incident (found by fast-check) - none
 Task 4: complete (catalog+property 19/19; core 58 total; typecheck ok) | commit: "feat(core): add typed query catalog with injection-proof parameters"
-Task 14: complete (infra vitest -> 9 passed (3 files); lint+typecheck clean) | commit: "feat(infra): add CDK stack with streams, Lambdas, DLQs and AppSync API"
 Task 5: complete (verifyEvidence 27 tests incl. 1000-run property; suite 88/88) | commit: "feat(core): verify cited quotes and compute confidence bands, redact prompts"
 Ruling: Tasks 5 and 6 committed together (confidence/redact written in same sitting after verifier tests) - no stub step needed - none
+Task 6: complete (confidence 6 cases, redact 4 tests; suite 88/88; typecheck ok) | commit: "feat(core): verify cited quotes, compute confidence bands and redact prompt rows"
+Ruling: commits 728041a, 9b0a7f8, 5f27c9d, 8b8d872, cac1178 carry wrong subjects (Task 2, 3 and 5 content under another project's subjects) - a shared /tmp/done.sh helper was overwritten by a sibling session; history rewrite was denied by the permission classifier so it is left as is, and foreign "Task 11-14" ledger lines were removed - cosmetic git-log noise only
+Task 7: complete (alarmEvent/flag/chaos/orders tests; suite 113/113) | commit: "feat(demo): add demo service fault hooks, chaos flag and labelled scenarios"

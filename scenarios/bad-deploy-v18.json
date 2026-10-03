@@ -1,0 +1,1 @@
+{ "id": "bad-deploy-v18", "fault": "bad_deploy", "params": { "rate": 0.35, "version": "18" }, "durationSec": 600, "expectedCategory": "BAD_DEPLOY", "expectedAlarm": "orders-5xx-rate" }
