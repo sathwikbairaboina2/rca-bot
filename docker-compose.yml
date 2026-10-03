@@ -1,0 +1,18 @@
+name: rca-bot
+services:
+  slack-sink:
+    image: node:24-alpine
+    container_name: rca-bot-slack-sink
+    working_dir: /app
+    command: ["node", "server.mjs"]
+    environment:
+      PORT: "8080"
+    volumes:
+      - "./docker/slack-sink:/app:ro"
+    ports:
+      - "127.0.0.1:5350:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
