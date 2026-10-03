@@ -65,3 +65,4 @@ Task 11: complete (runners/results/runQueries tests) | commit: "feat(ports): run
 Task 12: complete (schemas/ollama/bedrock/scripted tests) | commit: "feat(model): add model port with Ollama, Bedrock Converse and scripted models"
 Task 13: complete (prompts 5 + planQueries 7 tests) | commit: "feat(steps): let the model choose catalog queries with validation and fallback"
 Task 14: complete (hypothesize 6 tests (I10, I12)) | commit: "feat(steps): draft schema-validated hypotheses with one retry and redacted prompts"
+Task 15: complete (heuristic top1 on all 5 scenarios w/ 0 dropped, fabricator drops exactly 2, factory) | commit: "feat(model): add heuristic baseline, citation fabricator and model factory"
