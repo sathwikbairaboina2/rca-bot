@@ -35,7 +35,7 @@ export function getTemplate(id: string): QueryTemplate {
 }
 
 function validateFilterValue(v: unknown): string {
-  if (typeof v !== "string" || !FILTER_VALUE_RE.test(v) || /^/.*/$/.test(v)) {
+  if (typeof v !== "string" || !FILTER_VALUE_RE.test(v) || /^\/.*\/$/.test(v)) {
     throw new CatalogError("filterValue must match " + FILTER_VALUE_RE.source + " and must not look like a /regex/");
   }
   return v;
