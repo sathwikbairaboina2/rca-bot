@@ -56,3 +56,4 @@ Task 3: complete (insights 33/33 (parser+evaluate); typecheck ok) | commit: "fea
 Ruling: reject filterValue shaped like /regex/ in addition to FILTER_VALUE_RE - the plan regex must allow "/" (for "orders/v18: 503") yet the plan test requires "/abc/" rejected - negligible: values are quoted literals so either way inert
 Ruling: clampWindow also floors endMs at incident.startMs - plan formula violates the "always inside incident" property for requests entirely before the incident (found by fast-check) - none
 Task 4: complete (catalog+property 19/19; core 58 total; typecheck ok) | commit: "feat(core): add typed query catalog with injection-proof parameters"
+Task 14: complete (infra vitest -> 9 passed (3 files); lint+typecheck clean) | commit: "feat(infra): add CDK stack with streams, Lambdas, DLQs and AppSync API"
