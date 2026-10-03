@@ -27,28 +27,36 @@ export async function runFabricationBench(o: { repeat: number; outFile: string }
     schema: 1, env: "local-fixture", fabricatedInjected: 0, fabricatedBlocked: 0, byKind,
     honestInjected: 0, honestKept: 0, unverifiedPostedTotal: 0, runs: [],
   };
+  // One fabricator per scenario, reused across repeats: its call counter rotates the injected kinds,
+  // so repeat 2 exercises "query" and "field" in addition to "char" and "row".
+  const models = new Map<string, FabricatorModel>();
   for (let r = 0; r < o.repeat; r++) {
     for (const s of loadScenarios()) {
       const seed = 1000 + r;
-      const model = new FabricatorModel(new HeuristicModel(), { seed });
+      let model = models.get(s.id);
+      if (!model) { model = new FabricatorModel(new HeuristicModel(), { seed: 1000 }); models.set(s.id, model); }
+      const fab0 = model.log.fabricated.length;
+      const honest0 = model.log.honest.length;
       const { report } = await runPipelineOnScenario(s, seed, model);
+      const fabricated = model.log.fabricated.slice(fab0);
+      const honest = model.log.honest.slice(honest0);
       const droppedSummaries = new Set(report.dropped.map((d) => d.hypothesis.summary));
       const postedSummaries = new Set(report.posted.map((h) => h.summary));
       let blocked = 0;
-      for (const f of model.log.fabricated) {
+      for (const f of fabricated) {
         byKind[f.kind].injected++;
         if (droppedSummaries.has(f.summary) && !postedSummaries.has(f.summary)) {
           byKind[f.kind].blocked++;
           blocked++;
         }
       }
-      const kept = model.log.honest.filter((h) => postedSummaries.has(h)).length;
-      out.fabricatedInjected += model.log.fabricated.length;
+      const kept = honest.filter((h) => postedSummaries.has(h)).length;
+      out.fabricatedInjected += fabricated.length;
       out.fabricatedBlocked += blocked;
-      out.honestInjected += model.log.honest.length;
+      out.honestInjected += honest.length;
       out.honestKept += kept;
       out.unverifiedPostedTotal += verifyEvidence(report.posted, report.queries).dropped.length;
-      out.runs.push({ scenarioId: s.id, seed, injected: model.log.fabricated.length, blocked, honestKept: kept === model.log.honest.length });
+      out.runs.push({ scenarioId: s.id, seed, injected: fabricated.length, blocked, honestKept: kept === honest.length });
     }
   }
   await mkdir(dirname(o.outFile), { recursive: true });

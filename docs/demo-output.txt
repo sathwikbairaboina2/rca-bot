@@ -1,0 +1,16 @@
+Simulated ddb-throttle-40 (seed 1001): 3600 requests, 22036 log events; fault ddb_throttle from 2026-10-03T09:50:00.000Z
+Alarm orders-5xx-rate fired at 2026-10-03T09:53:00.000Z
+
+Incident inc-202610030953-c549e9 - orders - POSTED
+Alarms: orders-5xx-rate
+Model: heuristic (2 calls, 0 in / 0 out tokens), 6 queries run
+
+Top hypothesis: DEPENDENCY_THROTTLING (confidence Medium)
+  DynamoDB throttling: 247 ProvisionedThroughputExceededException errors in the window.
+Evidence:
+  q6 throttling_exceptions row 0: errorType=ProvisionedThroughputExceededException
+  q1 errors_by_message row 0: errorType=ProvisionedThroughputExceededException, message=order write failed
+Deploy: 2026-10-03T09:35:00.000Z rca-demo-payments 41 -> 42
+
+Card posted to http://localhost:5350/
+Investigation took 1141 ms

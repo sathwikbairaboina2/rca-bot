@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "env": "local-fixture",
+  "model": "ollama:qwen3.8:27b",
+  "startedAt": "2026-10-03T23:34:46.222Z",
+  "updatedAt": "2026-10-03T23:49:40.710Z",
+  "complete": false,
+  "runsPlanned": 15,
+  "runs": [
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1000,
+      "expected": "BAD_DEPLOY",
+      "status": "POSTED",
+      "postedCategories": [
+        "BAD_DEPLOY"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 3,
+      "inputTokens": 1617,
+      "outputTokens": 467,
+      "queriesRun": 6,
+      "ms": 894167,
+      "notes": [
+        "plan attempt 1 invalid: ollama request failed: fetch failed"
+      ]
+    }
+  ],
+  "summary": {
+    "n": 1,
+    "top1Rate": 1,
+    "top2Rate": 1,
+    "inconclusiveRate": 0,
+    "unverifiedPostedTotal": 0,
+    "droppedTotal": 0,
+    "errorCount": 0,
+    "medianMs": 894167,
+    "p95Ms": 894167,
+    "inputTokens": 1617,
+    "outputTokens": 467,
+    "perScenario": {
+      "bad-deploy-v18": {
+        "n": 1,
+        "top1": 1,
+        "top2": 1,
+        "inconclusive": 0
+      }
+    }
+  }
+}

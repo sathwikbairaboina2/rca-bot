@@ -49,5 +49,6 @@ function isMain(): boolean {
 }
 
 if (isMain()) {
-  runCli(process.argv.slice(2), realIo).then((code) => process.exit(code));
+  // Set exitCode instead of calling process.exit: on Windows, exiting with a fetch still closing trips a libuv assertion.
+  runCli(process.argv.slice(2), realIo).then((code) => { process.exitCode = code; });
 }

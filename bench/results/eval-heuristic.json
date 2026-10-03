@@ -1,0 +1,356 @@
+{
+  "schema": 1,
+  "env": "local-fixture",
+  "model": "heuristic",
+  "startedAt": "2026-10-03T23:31:56.324Z",
+  "updatedAt": "2026-10-03T23:32:15.348Z",
+  "complete": true,
+  "runsPlanned": 15,
+  "runs": [
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1000,
+      "expected": "BAD_DEPLOY",
+      "status": "POSTED",
+      "postedCategories": [
+        "BAD_DEPLOY"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1569,
+      "notes": []
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1000,
+      "expected": "COLD_START_STORM",
+      "status": "POSTED",
+      "postedCategories": [
+        "COLD_START_STORM"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1602,
+      "notes": []
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1000,
+      "expected": "DEPENDENCY_THROTTLING",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_THROTTLING"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1290,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1000,
+      "expected": "DEPENDENCY_ERRORS",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_ERRORS"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 734,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1000,
+      "expected": "TIMEOUT",
+      "status": "POSTED",
+      "postedCategories": [
+        "TIMEOUT"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 683,
+      "notes": []
+    },
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1001,
+      "expected": "BAD_DEPLOY",
+      "status": "POSTED",
+      "postedCategories": [
+        "BAD_DEPLOY"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 877,
+      "notes": []
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1001,
+      "expected": "COLD_START_STORM",
+      "status": "POSTED",
+      "postedCategories": [
+        "COLD_START_STORM"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 940,
+      "notes": []
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1001,
+      "expected": "DEPENDENCY_THROTTLING",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_THROTTLING"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 999,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1001,
+      "expected": "DEPENDENCY_ERRORS",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_ERRORS"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1014,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1001,
+      "expected": "TIMEOUT",
+      "status": "POSTED",
+      "postedCategories": [
+        "TIMEOUT"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1251,
+      "notes": []
+    },
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1002,
+      "expected": "BAD_DEPLOY",
+      "status": "POSTED",
+      "postedCategories": [
+        "BAD_DEPLOY"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1241,
+      "notes": []
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1002,
+      "expected": "COLD_START_STORM",
+      "status": "POSTED",
+      "postedCategories": [
+        "COLD_START_STORM"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1203,
+      "notes": []
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1002,
+      "expected": "DEPENDENCY_THROTTLING",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_THROTTLING"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1188,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1002,
+      "expected": "DEPENDENCY_ERRORS",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_ERRORS"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1064,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1002,
+      "expected": "TIMEOUT",
+      "status": "POSTED",
+      "postedCategories": [
+        "TIMEOUT"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "queriesRun": 6,
+      "ms": 1338,
+      "notes": []
+    }
+  ],
+  "summary": {
+    "n": 15,
+    "top1Rate": 1,
+    "top2Rate": 1,
+    "inconclusiveRate": 0,
+    "unverifiedPostedTotal": 0,
+    "droppedTotal": 0,
+    "errorCount": 0,
+    "medianMs": 1188,
+    "p95Ms": 1602,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "perScenario": {
+      "bad-deploy-v18": {
+        "n": 3,
+        "top1": 3,
+        "top2": 3,
+        "inconclusive": 0
+      },
+      "cold-start-storm": {
+        "n": 3,
+        "top1": 3,
+        "top2": 3,
+        "inconclusive": 0
+      },
+      "ddb-throttle-40": {
+        "n": 3,
+        "top1": 3,
+        "top2": 3,
+        "inconclusive": 0
+      },
+      "payments-5xx-50": {
+        "n": 3,
+        "top1": 3,
+        "top2": 3,
+        "inconclusive": 0
+      },
+      "payments-timeout-30": {
+        "n": 3,
+        "top1": 3,
+        "top2": 3,
+        "inconclusive": 0
+      }
+    }
+  }
+}

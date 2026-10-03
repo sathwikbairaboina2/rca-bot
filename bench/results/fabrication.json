@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "env": "local-fixture",
+  "fabricatedInjected": 30,
+  "fabricatedBlocked": 30,
+  "byKind": {
+    "char": {
+      "injected": 10,
+      "blocked": 10
+    },
+    "row": {
+      "injected": 10,
+      "blocked": 10
+    },
+    "query": {
+      "injected": 5,
+      "blocked": 5
+    },
+    "field": {
+      "injected": 5,
+      "blocked": 5
+    }
+  },
+  "honestInjected": 15,
+  "honestKept": 15,
+  "unverifiedPostedTotal": 0,
+  "runs": [
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1000,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1000,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1000,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1000,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1000,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1001,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1001,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1001,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1001,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1001,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1002,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1002,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1002,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1002,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1002,
+      "injected": 2,
+      "blocked": 2,
+      "honestKept": true
+    }
+  ]
+}

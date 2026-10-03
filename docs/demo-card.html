@@ -1,0 +1,14 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="5"><title>rca-bot · Slack sink</title><style>
+:root{color-scheme:light dark;--bg:#f6f6f4;--card:#fff;--fg:#1c1c1a;--muted:#6b6b66;--line:#dcdcd6;--accent:#7a3cff}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--card:#1e1e1c;--fg:#ececea;--muted:#9a9a94;--line:#33332f;--accent:#a98bff}}
+body{margin:0;padding:24px 16px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif}
+main{max-width:720px;margin:0 auto}
+h1{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin:0 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 16px}
+.card h2{font-size:17px;margin:4px 0 8px}
+.meta{color:var(--muted);font-size:12px}
+.section{margin:8px 0}.ctx{color:var(--muted);font-size:13px;margin:4px 0}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px;overflow:auto;font-size:12px}
+code{background:var(--bg);border-radius:4px;padding:0 4px}
+button{font:inherit;padding:4px 10px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--muted)}
+</style></head><body><main><h1>#incidents · local Slack sink</h1><article class=card><div class=meta>#incidents · 1791070512.000001 · inc-202610030953-c549e9</div><h2>🚨 orders-5xx-rate · orders</h2><div class=ctx>Status: <b>POSTED</b> · opened 2026-10-03T09:53:00.000Z · model heuristic · 6 queries · 1 alarm(s)</div><div class=section><b>Top hypothesis:</b> DEPENDENCY_THROTTLING (confidence <b>Medium</b>)<br>DynamoDB throttling: 247 ProvisionedThroughputExceededException errors in the window.</div><div class=section><b>Evidence</b><br>• <code>q6</code> throttling_exceptions row 0: errorType=ProvisionedThroughputExceededException<br>• <code>q1</code> errors_by_message row 0: errorType=ProvisionedThroughputExceededException, message=order write failed</div><div class=section><b>Deploys near the window</b><br>• 2026-10-03T09:35:00.000Z rca-demo-payments 41 → 42</div><div class=actions><button disabled>Correct</button> <button disabled>Wrong</button> <button disabled>Show raw queries</button></div></article></main></body></html>
