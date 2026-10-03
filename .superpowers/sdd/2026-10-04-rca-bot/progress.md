@@ -60,3 +60,4 @@ Ruling: commits 728041a, 9b0a7f8, 5f27c9d, 8b8d872, cac1178 carry wrong subjects
 Task 7: complete (alarmEvent/flag/chaos/orders tests; suite 113/113) | commit: "feat(demo): add demo service fault hooks, chaos flag and labelled scenarios"
 Task 8: complete (sim 14/14 (5 scenarios alarm+signature, determinism); suite green) | commit: "feat(sim): simulate the demo service under labelled faults with alarm evaluation"
 Task 9: complete (memory store 5 + dedupe 5 tests incl. 5-concurrent storm) | commit: "feat(steps): group alarms into incidents and enforce query and token budgets"
+Task 10: complete (dynamo store 7 tests with aws-sdk-client-mock) | commit: "feat(ports): persist incidents and budgets in DynamoDB with conditional writes"
