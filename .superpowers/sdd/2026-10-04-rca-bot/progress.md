@@ -72,3 +72,4 @@ Task 17: complete (sink 8/8 tests; docker smoke: compose up --wait -> Healthy, c
 Task 18: complete (pipeline 8 + storm 1 + contextSource 4 tests) | commit: "feat(pipeline): run the full investigation in-process with shared stage functions"
 Task 19: complete (cli 8 tests; npm run build ok; dist catalog lint -> 8 templates OK; dist demo ddb-throttle-40 POSTED in 1569 ms) | commit: "feat(cli): add rca demo, catalog lint, incident show and chaos commands"
 Task 20: complete (eval 5 tests (score, runEval, never-crash, fabrication 10/10 blocked)) | commit: "feat(eval): score root-cause accuracy and verifier blocking on labelled scenarios"
+Task 21: complete (handlers 9 tests; npm run bundle -> 10 bundles, orders 3406 KiB, payments 3403, chaos 3405, 7 investigator steps 3613 KiB each) | commit: "feat(handlers): add Lambda entrypoints over the shared stages and an esbuild bundle"
