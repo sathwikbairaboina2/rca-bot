@@ -64,3 +64,4 @@ Task 10: complete (dynamo store 7 tests with aws-sdk-client-mock) | commit: "fea
 Task 11: complete (runners/results/runQueries tests) | commit: "feat(ports): run catalog queries in fixture mode or on CloudWatch Logs Insights"
 Task 12: complete (schemas/ollama/bedrock/scripted tests) | commit: "feat(model): add model port with Ollama, Bedrock Converse and scripted models"
 Task 13: complete (prompts 5 + planQueries 7 tests) | commit: "feat(steps): let the model choose catalog queries with validation and fallback"
+Task 14: complete (hypothesize 6 tests (I10, I12)) | commit: "feat(steps): draft schema-validated hypotheses with one retry and redacted prompts"
