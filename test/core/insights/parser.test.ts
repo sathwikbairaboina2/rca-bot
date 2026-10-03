@@ -56,7 +56,7 @@ describe("parseQuery", () => {
     expect(parseQuery("FILTER x = 1 | SORT x DESC | LIMIT 5")).toHaveLength(3);
   });
   it("handles escapes in single-quoted strings", () => {
-    const [c] = parseQuery("filter m = 'it\'s'");
+    const [c] = parseQuery("filter m = 'it\\'s'");
     expect((c as { expr: { value: string } }).expr.value).toBe("it's");
   });
   it.each([

@@ -50,3 +50,4 @@ Task 1: complete (rng+time 6/6; typecheck ok) | commit: "chore: scaffold rca-bot
 Task 10: complete (functions test:int -> 11 passed (3 files); with DDB down: unit test 18 passed exit 0, test:int -> 'DynamoDB Local not reachable at http://127.0.0.1:5360. Start it with: docker compose up -d dynamodb') | commit: "feat(functions): add DynamoDB store with versioned transactional price writes"
 Task 11: complete (functions vitest -> 27 passed (5 files); lint+typecheck clean) | commit: "feat(functions): add price publisher handler with SigV4 AppSync and local shim publishers"
 Task 12: complete (functions vitest -> 31 passed; pnpm build -> bundled recompute: 310380 bytes, bundled publisher: 961863 bytes) | commit: "build(functions): bundle recompute and publisher Lambdas with esbuild"
+Task 2: complete (parser 21/21; typecheck ok) | commit: "feat(core): parse the Logs Insights subset used by the catalog"

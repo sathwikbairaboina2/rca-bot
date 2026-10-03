@@ -92,8 +92,9 @@ class Parser {
     let p: number | undefined;
     if (this.eatPunct(",")) {
       if (fn !== "pct") this.fail(`${fn} does not take a percentile`);
-      if (this.cur.type !== "number") this.fail("expected percentile number");
-      p = this.cur.value as number;
+      const t: Token = this.cur;
+      if (t.type !== "number") this.fail("expected percentile number");
+      p = t.value as number;
       if (!(p > 0 && p <= 100)) this.fail("percentile must be in (0,100]");
       this.i++;
     } else if (fn === "pct") this.fail("pct needs a percentile");
