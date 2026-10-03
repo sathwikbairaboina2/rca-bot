@@ -51,3 +51,4 @@ Task 10: complete (functions test:int -> 11 passed (3 files); with DDB down: uni
 Task 11: complete (functions vitest -> 27 passed (5 files); lint+typecheck clean) | commit: "feat(functions): add price publisher handler with SigV4 AppSync and local shim publishers"
 Task 12: complete (functions vitest -> 31 passed; pnpm build -> bundled recompute: 310380 bytes, bundled publisher: 961863 bytes) | commit: "build(functions): bundle recompute and publisher Lambdas with esbuild"
 Task 2: complete (parser 21/21; typecheck ok) | commit: "feat(core): parse the Logs Insights subset used by the catalog"
+Task 13: complete (api vitest -> 18 passed; lint+typecheck clean; AppSync lint rule proof: temporary for-loop in Query.price.js -> grep -c @aws-appsync/no-for = 1, reverted) | commit: "feat(api): add GraphQL schema and APPSYNC_JS resolvers with unit tests"
