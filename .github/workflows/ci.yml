@@ -1,0 +1,40 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run lint:catalog
+      - run: npm run synth
+      - run: npx tsx src/cli/main.ts eval run --model heuristic --scenarios all --repeat 1 --out ci-eval.json
+      - run: npx tsx src/cli/main.ts eval fabrication --repeat 1 --out ci-fabrication.json
+      - run: npm pack --dry-run
+  localstack-contract:
+    runs-on: ubuntu-latest
+    needs: test
+    env:
+      LOCALSTACK_AUTH_TOKEN: ${{ secrets.LOCALSTACK_AUTH_TOKEN }}
+      LOCALSTACK_TAG: ${{ vars.LOCALSTACK_TAG }}
+    steps:
+      - name: Skip without token
+        if: env.LOCALSTACK_AUTH_TOKEN == ''
+        run: echo "::warning::LOCALSTACK_AUTH_TOKEN not set; Logs Insights contract test NOT run (ADR 0007)."
+      - uses: actions/checkout@v4
+        if: env.LOCALSTACK_AUTH_TOKEN != ''
+      - uses: actions/setup-node@v4
+        if: env.LOCALSTACK_AUTH_TOKEN != ''
+        with: { node-version: 24, cache: npm }
+      - if: env.LOCALSTACK_AUTH_TOKEN != ''
+        run: npm ci && docker compose -f docker-compose.localstack.yml up -d --wait
+      - if: env.LOCALSTACK_AUTH_TOKEN != ''
+        run: npm run test:integration
+        env: { RCA_LOCALSTACK: "1" }
+      - if: always() && env.LOCALSTACK_AUTH_TOKEN != ''
+        run: docker compose -f docker-compose.localstack.yml down

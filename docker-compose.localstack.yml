@@ -1,0 +1,10 @@
+name: rca-bot
+services:
+  localstack:
+    image: localstack/localstack:${LOCALSTACK_TAG:?set LOCALSTACK_TAG to a dated LocalStack release tag}
+    container_name: rca-bot-localstack
+    ports:
+      - "127.0.0.1:5351:4566"
+    environment:
+      LOCALSTACK_AUTH_TOKEN: ${LOCALSTACK_AUTH_TOKEN:?LOCALSTACK_AUTH_TOKEN is required (LocalStack 2026.03+; free Hobby plan for non-commercial use)}
+      SERVICES: logs
