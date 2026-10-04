@@ -3,7 +3,7 @@
   "env": "local-fixture",
   "model": "ollama:qwen3.8:27b",
   "startedAt": "2026-10-03T23:34:46.222Z",
-  "updatedAt": "2026-10-03T23:49:40.710Z",
+  "updatedAt": "2026-10-04T00:36:01.453Z",
   "complete": false,
   "runsPlanned": 15,
   "runs": [
@@ -28,26 +28,254 @@
       "notes": [
         "plan attempt 1 invalid: ollama request failed: fetch failed"
       ]
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1000,
+      "expected": "COLD_START_STORM",
+      "status": "POSTED",
+      "postedCategories": [
+        "COLD_START_STORM"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 3,
+      "inputTokens": 1454,
+      "outputTokens": 300,
+      "queriesRun": 6,
+      "ms": 802651,
+      "notes": [
+        "used default plan",
+        "hypothesize attempt 1 failed: ollama request failed: fetch failed"
+      ]
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1000,
+      "expected": "DEPENDENCY_THROTTLING",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_THROTTLING"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1543,
+      "outputTokens": 400,
+      "queriesRun": 6,
+      "ms": 290920,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1000,
+      "expected": "DEPENDENCY_ERRORS",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_ERRORS"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1506,
+      "outputTokens": 455,
+      "queriesRun": 6,
+      "ms": 166137,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1000,
+      "expected": "TIMEOUT",
+      "status": "INCONCLUSIVE",
+      "postedCategories": [],
+      "top1": false,
+      "top2": false,
+      "inconclusive": true,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1422,
+      "outputTokens": 192,
+      "queriesRun": 6,
+      "ms": 171346,
+      "notes": []
+    },
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1001,
+      "expected": "BAD_DEPLOY",
+      "status": "POSTED",
+      "postedCategories": [
+        "BAD_DEPLOY"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1708,
+      "outputTokens": 465,
+      "queriesRun": 6,
+      "ms": 217274,
+      "notes": []
+    },
+    {
+      "scenarioId": "cold-start-storm",
+      "seed": 1001,
+      "expected": "COLD_START_STORM",
+      "status": "POSTED",
+      "postedCategories": [
+        "COLD_START_STORM"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1454,
+      "outputTokens": 336,
+      "queriesRun": 6,
+      "ms": 189240,
+      "notes": [
+        "used default plan"
+      ]
+    },
+    {
+      "scenarioId": "ddb-throttle-40",
+      "seed": 1001,
+      "expected": "DEPENDENCY_THROTTLING",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_THROTTLING"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1543,
+      "outputTokens": 400,
+      "queriesRun": 6,
+      "ms": 241655,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-5xx-50",
+      "seed": 1001,
+      "expected": "DEPENDENCY_ERRORS",
+      "status": "POSTED",
+      "postedCategories": [
+        "DEPENDENCY_ERRORS"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1602,
+      "outputTokens": 453,
+      "queriesRun": 6,
+      "ms": 250745,
+      "notes": []
+    },
+    {
+      "scenarioId": "payments-timeout-30",
+      "seed": 1001,
+      "expected": "TIMEOUT",
+      "status": "POSTED",
+      "postedCategories": [
+        "TIMEOUT",
+        "DEPENDENCY_ERRORS"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1418,
+      "outputTokens": 506,
+      "queriesRun": 6,
+      "ms": 213616,
+      "notes": []
+    },
+    {
+      "scenarioId": "bad-deploy-v18",
+      "seed": 1002,
+      "expected": "BAD_DEPLOY",
+      "status": "POSTED",
+      "postedCategories": [
+        "BAD_DEPLOY"
+      ],
+      "top1": true,
+      "top2": true,
+      "inconclusive": false,
+      "unverifiedPosted": 0,
+      "dropped": 0,
+      "modelCalls": 2,
+      "inputTokens": 1713,
+      "outputTokens": 397,
+      "queriesRun": 6,
+      "ms": 234573,
+      "notes": []
     }
   ],
   "summary": {
-    "n": 1,
-    "top1Rate": 1,
-    "top2Rate": 1,
-    "inconclusiveRate": 0,
+    "n": 11,
+    "top1Rate": 0.9091,
+    "top2Rate": 0.9091,
+    "inconclusiveRate": 0.0909,
     "unverifiedPostedTotal": 0,
     "droppedTotal": 0,
     "errorCount": 0,
-    "medianMs": 894167,
+    "medianMs": 234573,
     "p95Ms": 894167,
-    "inputTokens": 1617,
-    "outputTokens": 467,
+    "inputTokens": 16980,
+    "outputTokens": 4371,
     "perScenario": {
       "bad-deploy-v18": {
-        "n": 1,
+        "n": 3,
+        "top1": 3,
+        "top2": 3,
+        "inconclusive": 0
+      },
+      "cold-start-storm": {
+        "n": 2,
+        "top1": 2,
+        "top2": 2,
+        "inconclusive": 0
+      },
+      "ddb-throttle-40": {
+        "n": 2,
+        "top1": 2,
+        "top2": 2,
+        "inconclusive": 0
+      },
+      "payments-5xx-50": {
+        "n": 2,
+        "top1": 2,
+        "top2": 2,
+        "inconclusive": 0
+      },
+      "payments-timeout-30": {
+        "n": 2,
         "top1": 1,
         "top2": 1,
-        "inconclusive": 0
+        "inconclusive": 1
       }
     }
   }

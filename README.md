@@ -1,6 +1,6 @@
 # rca-bot
 
-**Top-1 root cause on labelled chaos scenarios: 100.0% (1/1) with qwen3.8:27b (partial: 1 of 15 planned runs finished), with 0 unverified claims posted; the verifier blocked 30 of 30 injected fabricated citations.** Simulated incidents only (`local-fixture`); see [bench/README.md](bench/README.md).
+**Top-1 root cause on labelled chaos scenarios: 90.9% (10/11) with qwen3.8:27b (partial: 11 of 15 planned runs finished), with 0 unverified claims posted; the verifier blocked 30 of 30 injected fabricated citations.** Simulated incidents only (`local-fixture`); see [bench/README.md](bench/README.md).
 
 An alarm fires. The bot picks a few read-only CloudWatch Logs Insights queries from a fixed catalog, asks a model for root-cause hypotheses, and posts a Slack card. A deterministic verifier checks every citation first: if a quoted value is not verbatim in the stored query results, the whole hypothesis is dropped and never posted.
 
@@ -91,7 +91,7 @@ All numbers are from `bench/results/` (environment `local-fixture`; see [bench/R
 | Bench | Model | n | Result |
 |---|---|---|---|
 | Top-1 root cause, 5 labelled scenarios | heuristic baseline | 15 | 100% (top-2 100%), unverified posted 0 |
-| Top-1 root cause, 1 labelled scenarios | ollama qwen3.8:27b | 1 of 15 planned | 100.0% (1/1), top-2 100.0% (1/1), unverified posted 0, median 894167 ms |
+| Top-1 root cause, 5 labelled scenarios | ollama qwen3.8:27b | 11 of 15 planned | 90.9% (10/11), top-2 90.9% (10/11), unverified posted 0, median 234573 ms |
 | Fabricated citations blocked | verifier (heuristic + fabricator) | 30 | 30 of 30 (honest hypotheses kept: 15 of 15) |
 
 The heuristic baseline was written next to the simulator, so its score shows the scenarios are separable, not that the bot is smart.

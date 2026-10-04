@@ -6,7 +6,7 @@ rca-bot turns a CloudWatch alarm into a Slack card with a root-cause hypothesis.
 
 A model chooses read-only Logs Insights queries from a fixed catalog. It then drafts hypotheses that must cite rows from the query results. A deterministic verifier drops any hypothesis whose quoted values are not verbatim in those rows.
 
-The headline number: top-1 root cause is 100.0% (1 of 1 runs, partial run of 15 planned) with qwen3.8:27b on labelled chaos scenarios. 0 unverified claims were posted, and the verifier blocked 30 of 30 injected fabricated citations. All simulated; none of it ran on AWS.
+The headline number: top-1 root cause is 90.9% (10 of 11 runs, partial run of 15 planned) with qwen3.8:27b on labelled chaos scenarios. 0 unverified claims were posted, and the verifier blocked 30 of 30 injected fabricated citations. All simulated; none of it ran on AWS.
 
 ## 2. Quickstart (5 minutes)
 

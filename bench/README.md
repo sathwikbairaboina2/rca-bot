@@ -53,16 +53,16 @@ The honest hypothesis that was sent along with the fabricated ones was kept 15 o
 
 | Metric | Value |
 |---|---|
-| Runs finished | 1 of 15 planned (the run was stopped early: it takes about 15 minutes per run on the CPU here) |
-| Top-1 | 100.0% (1/1) |
-| Top-2 | 100.0% (1/1) |
-| Inconclusive | 0.0% |
+| Runs finished | 11 of 15 planned (the run was cut off by a machine crash; a run takes 3 to 15 minutes on the CPU here) |
+| Top-1 | 90.9% (10/11) |
+| Top-2 | 90.9% (10/11) |
+| Inconclusive | 9.1% (1/11, payments-timeout-30 seed 1000) |
 | Unverified posted | 0 |
 | Errors | 0 |
-| Median / p95 latency per investigation | 894167 ms / 894167 ms |
-| Tokens (model-reported) | 1617 in / 467 out |
+| Median / p95 latency per investigation | 234573 ms / 894167 ms |
+| Tokens (model-reported) | 16980 in / 4371 out |
 
-With n=1 this is an anecdote, not a rate: one run is one scenario at one seed. Read it together with the per-scenario table in the JSON file.
+With n=11 of 15 this is a partial result, not a full rate. The 4 missing runs are payments-5xx-50, payments-timeout-30, ddb-throttle-40 and cold-start-storm at seed 1002. Per-scenario counts are in the JSON file.
 
 ## Caveats
 
