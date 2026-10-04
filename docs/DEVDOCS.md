@@ -103,5 +103,6 @@ Ports used: `5350` for the Slack sink, `5351` for the optional LocalStack. The D
 - Slack buttons are rendered but not wired. Signature verification (I11) and the feedback handler are v0.2.
 - The CloudWatch context source reads the alarm and metrics only. A deploy timeline from AWS is v0.2.
 - The cold-start fault exists only in the simulator.
-- Local model runs are slow here (CPU only), so the LLM benchmark has a small `n`.
+- Local model runs are slow here (CPU only). The qwen3.8:27b benchmark finished 11 of 15 planned runs before a machine crash. The missing 4 are seed 1002 of payments-5xx-50, payments-timeout-30, ddb-throttle-40 and cold-start-storm. `eval run` cannot resume yet, so finishing them means re-running all 15.
+- Redaction masks any run of 13 to 19 digits as a card number. That also hides long numeric IDs, such as epoch milliseconds, from the model, so it cannot cite them.
 - v0.2 ideas: more scenarios and hold-outs, USD pricing once a price sheet is verified, a LocalStack or AWS deploy, Slack interactivity.

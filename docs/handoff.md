@@ -28,3 +28,21 @@ npm run eval:baseline && npm run bench:fabrication    # invariants: unverifiedPo
 npm pack --dry-run
 docker compose config --quiet
 ```
+
+## 2026-10-04 · Claude (Opus lead verifier) · main
+
+### What changed
+- Reviewed the v0.1 code (verifier, confidence, pipeline, catalog, Slack card, DynamoDB store) after the crashed run's recovery commits.
+- Fix: confidence now counts distinct `(queryId, row)` citations. Citing the same row twice could raise a hypothesis to `High` (I9). Test added.
+- Fix: the INCONCLUSIVE Slack card showed raw query rows without redaction. It now masks emails and card numbers like the model prompt does (I12). Test added.
+- Re-ran every gate on a clean `npm ci`: typecheck ok, 44 files / 267 tests pass, `8 templates OK`, 3 CDK templates, integration skipped, pack lists the CLI and scenarios, secret grep empty, `docker compose config` ok.
+- Re-ran the benches: heuristic top-1 15/15 with 0 unverified posted (median now 528 ms), fabrication 30/30 blocked with 15/15 honest kept. Re-ran the demo against the sink: POSTED DEPENDENCY_THROTTLING, 1 message in the sink.
+- Updated `bench/README.md` (heuristic latency) and the DEVDOCS known limits.
+
+### What is left
+- The qwen3.8:27b run is still 11 of 15. `eval run` has no resume, so finishing it means a full re-run (1 to 3 hours on this CPU).
+- The LocalStack contract test needs a token. v0.2 items are unchanged (see the entry above).
+- Five early commits carry another project's subjects (ledger `Ruling:`). History was not rewritten.
+
+### How to verify
+Same commands as the entry above. Expect `npm test` to report 44 files and 267 tests.

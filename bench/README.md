@@ -33,7 +33,7 @@ Both commands exit 1 if the invariant breaks, so CI fails on an unverified poste
 | Top-2 | 100% |
 | Inconclusive | 0% |
 | Unverified posted | 0 |
-| Median / p95 latency | 1188 ms / 1602 ms |
+| Median / p95 latency | 528 ms / 707 ms |
 
 The heuristic baseline is a rule-based model written alongside the simulator. Its accuracy shows that the scenarios are separable from the catalog queries. It does **not** show that the bot is smart.
 

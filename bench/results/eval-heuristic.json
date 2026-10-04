@@ -2,8 +2,8 @@
   "schema": 1,
   "env": "local-fixture",
   "model": "heuristic",
-  "startedAt": "2026-10-03T23:31:56.324Z",
-  "updatedAt": "2026-10-03T23:32:15.348Z",
+  "startedAt": "2026-10-04T01:08:10.260Z",
+  "updatedAt": "2026-10-04T01:08:22.179Z",
   "complete": true,
   "runsPlanned": 15,
   "runs": [
@@ -24,7 +24,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1569,
+      "ms": 697,
       "notes": []
     },
     {
@@ -44,7 +44,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1602,
+      "ms": 707,
       "notes": []
     },
     {
@@ -64,7 +64,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1290,
+      "ms": 528,
       "notes": []
     },
     {
@@ -84,7 +84,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 734,
+      "ms": 456,
       "notes": []
     },
     {
@@ -104,7 +104,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 683,
+      "ms": 448,
       "notes": []
     },
     {
@@ -124,7 +124,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 877,
+      "ms": 423,
       "notes": []
     },
     {
@@ -144,7 +144,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 940,
+      "ms": 446,
       "notes": []
     },
     {
@@ -164,7 +164,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 999,
+      "ms": 462,
       "notes": []
     },
     {
@@ -184,7 +184,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1014,
+      "ms": 435,
       "notes": []
     },
     {
@@ -204,7 +204,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1251,
+      "ms": 619,
       "notes": []
     },
     {
@@ -224,7 +224,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1241,
+      "ms": 531,
       "notes": []
     },
     {
@@ -244,7 +244,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1203,
+      "ms": 509,
       "notes": []
     },
     {
@@ -264,7 +264,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1188,
+      "ms": 590,
       "notes": []
     },
     {
@@ -284,7 +284,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1064,
+      "ms": 585,
       "notes": []
     },
     {
@@ -304,7 +304,7 @@
       "inputTokens": 0,
       "outputTokens": 0,
       "queriesRun": 6,
-      "ms": 1338,
+      "ms": 597,
       "notes": []
     }
   ],
@@ -316,8 +316,8 @@
     "unverifiedPostedTotal": 0,
     "droppedTotal": 0,
     "errorCount": 0,
-    "medianMs": 1188,
-    "p95Ms": 1602,
+    "medianMs": 528,
+    "p95Ms": 707,
     "inputTokens": 0,
     "outputTokens": 0,
     "perScenario": {
