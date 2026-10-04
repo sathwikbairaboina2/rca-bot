@@ -115,6 +115,18 @@ rca demo ddb-throttle-40
 rca catalog lint
 ```
 
+## Configuration
+
+All optional; see `.env.example`.
+
+| Variable | Used for |
+|---|---|
+| `SLACK_WEBHOOK_URL` | Post cards to a real Slack webhook. Unset: the local sink if it is healthy, else `.rca/slack/`. |
+| `OLLAMA_BASE_URL` | Ollama endpoint for `--model ollama:<name>` (default `http://localhost:11434`). |
+| `LOCALSTACK_AUTH_TOKEN` | Only for `docker-compose.localstack.yml`. |
+
+Model specs: `heuristic`, `ollama:<name>`, `bedrock:<modelId>`.
+
 ## AWS
 
 `npm run synth` bundles the Lambdas with esbuild and synthesizes three CDK stacks (`RcaDemoService`, `RcaInvestigator`, `RcaChaos`) into `cdk.out/`. Nothing is deployed in v0.1: there is no AWS account in the build environment and no LocalStack token. The default Bedrock model id is only an example; check regional availability and pass `-c modelId=<id>`.
