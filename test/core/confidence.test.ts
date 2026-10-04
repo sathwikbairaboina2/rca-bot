@@ -16,3 +16,15 @@ describe("computeConfidence", () => {
     expect(computeConfidence(e)).toBe(band);
   });
 });
+
+describe("computeConfidence with repeated citations", () => {
+  it("counts the same query row once, so repeats cannot raise the band", () => {
+    const dup: Evidence[] = [
+      { queryId: "q1", row: 0, quote: { f: "v" } },
+      { queryId: "q1", row: 0, quote: { g: "w" } },
+      { queryId: "q2", row: 0, quote: { f: "v" } },
+    ];
+    expect(computeConfidence(dup)).toBe("Medium");
+    expect(computeConfidence([dup[0]!, dup[1]!])).toBe("Low");
+  });
+});

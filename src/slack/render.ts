@@ -1,3 +1,4 @@
+import { redactText } from "../core/redact.js";
 import { toIso } from "../core/time.js";
 import type { Evidence, IncidentReport, QueryResult } from "../core/types.js";
 
@@ -49,7 +50,8 @@ export function renderIncidentCard(report: IncidentReport): SlackMessage {
     blocks.push(section(`*No verified root cause.* ${report.dropped.length} hypothesis(es) failed verification.`));
     const shown = report.queries.filter((q) => q.status === "Complete" && q.rows.length > 0).slice(0, 2);
     for (const q of shown) {
-      const rows = q.rows.slice(0, 3).map((r) => escapeMrkdwn(JSON.stringify(r))).join("\n");
+      // Raw rows never passed the verifier, so mask PII the same way model prompts are masked (I12).
+      const rows = q.rows.slice(0, 3).map((r) => escapeMrkdwn(redactText(JSON.stringify(r)))).join("\n");
       blocks.push(section(`\`${q.queryId}\` ${escapeMrkdwn(q.templateId)}\n\`\`\`\n${rows}\n\`\`\``));
     }
   }

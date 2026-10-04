@@ -28,6 +28,13 @@ describe("renderIncidentCard", () => {
     expect(json).toContain("No verified root cause");
     expect(json).toContain("```");
   });
+  it("INCONCLUSIVE redacts emails and card numbers in the raw rows", () => {
+    const queries = [q("q1", "message_search", [{ message: "refund for jo@example.com card 4111 1111 1111 1111 failed" }])];
+    const json = JSON.stringify(renderIncidentCard(base({ status: "INCONCLUSIVE", posted: [], queries })));
+    expect(json).not.toContain("jo@example.com");
+    expect(json).not.toContain("4111 1111 1111 1111");
+    expect(json).toContain("[email]");
+  });
   it("BUDGET_EXHAUSTED says so", () => {
     expect(JSON.stringify(renderIncidentCard(base({ status: "BUDGET_EXHAUSTED", posted: [], context: null, queries: [] })))).toContain("Budget exhausted");
   });
