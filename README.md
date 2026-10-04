@@ -1,6 +1,16 @@
-# rca-bot
+# 🚨 rca-bot
+
+> Alarm to root-cause bot. CloudWatch alarm in, Slack card out, with every claim tied to a log row.
 
 **Top-1 root cause on labelled chaos scenarios: 90.9% (10/11) with qwen3.8:27b (partial: 11 of 15 planned runs finished), with 0 unverified claims posted; the verifier blocked 30 of 30 injected fabricated citations.** Simulated incidents only (`local-fixture`); see [bench/README.md](bench/README.md).
+
+<!-- readme-header -->
+[![CI](https://github.com/sathwikbairaboina2/rca-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/sathwikbairaboina2/rca-bot/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/license-MIT-blue) ![TypeScript](https://img.shields.io/badge/-TypeScript-555) ![Step Functions](https://img.shields.io/badge/-Step%20Functions-555) ![Logs Insights](https://img.shields.io/badge/-Logs%20Insights-555)
+
+| Measured | Source |
+|---|---|
+| **90.9% top-1 root cause** | `bench/results/` |
+| **30 / 30 fabrications blocked** | `bench/results/` |
 
 An alarm fires. The bot picks a few read-only CloudWatch Logs Insights queries from a fixed catalog, asks a model for root-cause hypotheses, and posts a Slack card. A deterministic verifier checks every citation first: if a quoted value is not verbatim in the stored query results, the whole hypothesis is dropped and never posted.
 
